@@ -1,14 +1,15 @@
-#ethereumjs-tx-schnorr使い方
-##１、git clone
-##２、npm install
-##３、npm run build
-##４、cd ..
-##５、npm install -g ethereumjs-tx-schnorr
-##６、cd ethereumjs-tx-schnorr
-##７、cd dist
-##８、transaction.js内 L328付近 Vの検証を弄る
+# ethereumjs-tx-schnorr使い方
+### １、git clone
+### ２、npm install
+### ３、npm run build
+### ４、cd ..
+### ５、npm install -g ethereumjs-tx-schnorr
+### ６、cd ethereumjs-tx-schnorr
+### ７、cd dist
+### ８、transaction.js内 L328付近 Vの検証を弄る
+#### Vが44でもエラーが出ないようにしてるだけ
 
-'''
+```go
 
 Transaction.prototype._validateV = function (v) {
         if (v === undefined || v.length === 0) {
@@ -29,4 +30,4 @@ Transaction.prototype._validateV = function (v) {
         } 
     };
 
-'''
+```
