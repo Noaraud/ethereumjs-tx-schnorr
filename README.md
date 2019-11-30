@@ -1,4 +1,4 @@
-# ethereumjs-tx-schnorr使い方
+# ethereumjs-tx-schnorr
 ### １、git clone
 ### ２、npm install
 ### ３、npm run build
