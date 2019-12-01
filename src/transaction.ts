@@ -146,7 +146,7 @@ export default class Transaction {
       },
       {
         name: 'pubkey',
-        length: 32,
+        length: 33,
         allowZero: true,
         allowLess: true,
         default: new Buffer([]),
