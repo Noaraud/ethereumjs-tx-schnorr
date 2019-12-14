@@ -28,6 +28,7 @@ export default class Transaction {
   public to!: Buffer
   public value!: Buffer
   public data!: Buffer
+  public pubkey!: Buffer
   public v!: Buffer
   public r!: Buffer
   public s!: Buffer
@@ -126,6 +127,13 @@ export default class Transaction {
         default: new Buffer([]),
       },
       {
+        name: 'pubkey',
+        length: 33,
+        allowZero: true,
+        allowLess: true,
+        default: new Buffer([]),
+      },
+      {
         name: 'v',
         allowZero: true,
         default: new Buffer([]),
@@ -140,13 +148,6 @@ export default class Transaction {
       {
         name: 's',
         length: 32,
-        allowZero: true,
-        allowLess: true,
-        default: new Buffer([]),
-      },
-      {
-        name: 'pubkey',
-        length: 33,
         allowZero: true,
         allowLess: true,
         default: new Buffer([]),
