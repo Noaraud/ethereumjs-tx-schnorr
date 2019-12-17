@@ -406,7 +406,8 @@ export default class Transaction {
 
     if (!this._isSigned()) {
       // We sign with EIP155 all unsigned transactions after spuriousDragon
-      return onEIP155BlockOrLater
+      //return onEIP155BlockOrLater
+      return false
     }
 
     // EIP155 spec:
